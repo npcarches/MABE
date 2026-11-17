@@ -1,0 +1,65 @@
+ ╔══════════════════════════════════════════════════════════╗
+║   MABE PRODUCTION · TÓM TẮT THAY ĐỔI (16–17/11/2026)     ║
+╚══════════════════════════════════════════════════════════╝
+
+ NHÁNH GIT: feat/website-update
+   • commit d4883ab: toàn bộ thay đổi mục 1–7 (chưa push)
+   • phông chữ offline (mục 8): đã tải, chưa commit
+
+
+━━ 1. NỘI DUNG & HÌNH ẢNH ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  ✔ Thay toàn bộ ảnh mẫu bằng ảnh thật của MABE
+  ✔ Dự án chia 3 nhóm, mỗi dự án = 1 sản phẩm / 1 bộ đồ:
+      • Lookbook ............ 4 dự án  (khách: Em Tấm)
+      • Catalog ............. 8 dự án hộp (khách: Vietpacking Plus)
+                              + 5 dự án giày (khách: Street Soul Sneakers)
+      • Product lifestyle ... 11 dự án giày (khách: Street Soul Sneakers)
+  ✔ Ảnh giày catalog số 4, 5: đã xóa logo + giá, chỉ giữ sản phẩm
+      (kèm "Yêu cầu riêng": giữ màu & condition like new)
+  ✔ Cửa sổ chi tiết dự án: giữ nguyên tỉ lệ ảnh, bỏ SKU/tiến độ/nút đặt lịch,
+      thêm mục "Khách hàng" + dòng bản quyền
+  ✔ Mục đối tác: 3 logo thật (Em Tấm, Vietpacking Plus, Street Soul Sneakers)
+
+━━ 2. LOOKBOOK LÊN ĐẦU ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  Trước:  Catalog  →  Lookbook
+  Sau:    Lookbook →  Catalog
+  Áp dụng: trang chủ · bảng giá · quy trình · dự án · tên tab · footer
+
+━━ 3. LOGO MABE PRODUCTION ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  ▣ Máy ảnh khối đặc + chữ Montserrat Black + "PRODUCTION" mảnh
+  ✔ Bộ 14 file SVG tại assets/logo/ (logo chính, logo phụ, submark, icon)
+  ✔ Mỗi loại có bản nền sáng · nền tối · đen · trắng
+  ✔ Đã đưa vào header, footer, favicon
+  ✔ Xuất PNG nền trong suốt về ~/Downloads/MABE-logo-set/
+
+━━ 4. TÍNH NĂNG MỚI ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  🌐 Chuyển ngôn ngữ  VI | EN  ngay trên header (có nhớ lựa chọn)
+  ☰  Menu 3 gạch trên điện thoại (hết cuộn ngang ở header)
+  📱 Responsive: lề rộng hơn, thanh lọc cuộn được, nút cảm ứng ≥ 40px
+  🗑  Bỏ thanh "Bản demo" trên cùng và khối xanh cuối trang Dự án
+
+━━ 5. TRANG LIÊN HỆ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  ┌────────────────────────┬───────────────────────┐
+  │  SỐ ĐIỆN THOẠI         │  EMAIL                │
+  │  Thành: Zalo ·         │  mabe.product@gmail   │
+  │         Telegram ·     │  [Sao chép] [Gửi mail]│
+  │         WhatsApp       │                       │
+  │  Như:   Zalo           │                       │
+  │  INSTAGRAM             │                       │
+  │  @mabeproduction       │                       │
+  └────────────────────────┴───────────────────────┘
+  ✘ Đã bỏ form gửi email (FormSubmit không phản hồi khi thử)
+
+━━ 6. FOOTER ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  Dòng 1: logo MABE
+  Dòng 2: câu giới thiệu │ 2 số Zalo (xuống dòng) │ email + IG
+  Bỏ chữ "Ảnh: MABE", mỏng hơn bản đầu
+
+━━ 7. NGOÀI WEBSITE ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  ✎ 3 mẫu bio Instagram (đã gửi trong chat)
+  ✎ Tên tab: "MABE | Chụp ảnh lookbook và catalog"
+
+
+━━ 8. CHẠY OFFLINE ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  ✔ Phông Be Vietnam Pro đã tải về assets/fonts/ (5 độ đậm, có OFL)
+  ✔ Không còn tài nguyên nào tải từ internet → copy thư mục là chạy
