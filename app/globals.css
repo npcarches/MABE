@@ -1,8 +1,4 @@
-@font-face { font-family: "Be Vietnam Pro"; font-style: normal; font-weight: 400; font-display: swap; src: url("../assets/fonts/BeVietnamPro-Regular.ttf") format("truetype"); }
-@font-face { font-family: "Be Vietnam Pro"; font-style: normal; font-weight: 500; font-display: swap; src: url("../assets/fonts/BeVietnamPro-Medium.ttf") format("truetype"); }
-@font-face { font-family: "Be Vietnam Pro"; font-style: normal; font-weight: 600; font-display: swap; src: url("../assets/fonts/BeVietnamPro-SemiBold.ttf") format("truetype"); }
-@font-face { font-family: "Be Vietnam Pro"; font-style: normal; font-weight: 700; font-display: swap; src: url("../assets/fonts/BeVietnamPro-Bold.ttf") format("truetype"); }
-@font-face { font-family: "Be Vietnam Pro"; font-style: normal; font-weight: 800; font-display: swap; src: url("../assets/fonts/BeVietnamPro-ExtraBold.ttf") format("truetype"); }
+/* Site styles, ported unchanged from the static site. Be Vietnam Pro is loaded by next/font in app/layout.tsx. */
   :root {
     box-sizing: border-box;
     padding-top: env(safe-area-inset-top, 0px);
@@ -16,7 +12,7 @@
     --brand-dark: #0e6038;
     --brand-ink: #ffffff;
     --brand-soft: #e3f3ea;
-    --font: "Be Vietnam Pro", "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
+    --font: var(--font-be-vietnam), "Be Vietnam Pro", "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
@@ -441,3 +437,9 @@ footer .f-row { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 12px 2
   .person .btn-row { width: 100%; margin-left: 0; }
   .person .btn-row .btn { flex: 1 1 auto; }
 }
+
+/* Set before paint by the inline script in app/layout.tsx when English is stored, so Vietnamese
+   text does not flash. The provider removes it after hydration; the animation reveals the page
+   anyway if scripts fail. */
+html.i18n-pending body { visibility: hidden; animation: i18n-reveal 0s linear 1s forwards; }
+@keyframes i18n-reveal { to { visibility: visible; } }
