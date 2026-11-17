@@ -3,47 +3,49 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>MABE | Chụp ảnh catalog và lookbook</title>
-<meta name="description" content="MABE chụp ảnh catalog và lookbook tại TP.HCM. Bảng giá công khai, màu chuẩn như ngoài đời, giao ảnh trong 3–5 ngày làm việc.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<title>MABE | Chụp ảnh lookbook và catalog</title>
+<meta name="description" content="MABE chụp ảnh lookbook và catalog tại TP.HCM. Bảng giá công khai, màu chuẩn như ngoài đời, giao ảnh trong 3–5 ngày làm việc.">
+<link rel="preload" href="assets/fonts/BeVietnamPro-Regular.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="icon" type="image/svg+xml" href="assets/logo/mabe-icon-dark.svg">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<div class="demo" id="demo"><div class="wrap"><span>Bản demo: ảnh và bảng giá là dữ liệu mẫu, MABE cần xác nhận trước khi dùng thật.</span><button type="button" id="demo-x">Ẩn</button></div></div>
-
 <header class="site-head">
   <div class="wrap bar">
-    <a class="logo" href="#home" aria-label="MABE, về trang chủ">MABE</a>
+    <a class="logo" href="#home" aria-label="MABE, về trang chủ"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 345.1 101" aria-hidden="true" focusable="false"><g transform="translate(16 25) scale(1)"><path style="fill:var(--ink)" fill-rule="evenodd" d="M4 0H76A4 4 0 0 1 80 4V56A4 4 0 0 1 76 60H4A4 4 0 0 1 0 56V4A4 4 0 0 1 4 0ZM12 -9H38V0H12ZM21 31a19 19 0 1 0 38 0a19 19 0 1 0 -38 0ZM64 8H72V14H64Z"/><circle cx="40" cy="31" r="10" style="fill:var(--brand)"/></g><path style="fill:var(--ink)" transform="translate(122 63.75)" d="M3.65 0V-44.8H16.06L33.98 -15.55H27.46L44.86 -44.8H57.28L57.41 0H43.65L43.52 -24.06H45.7L33.79 -4.03H27.14L14.72 -24.06H17.41V0Z M60.48 0 80.06 -44.8H94.91L114.5 0H98.88L84.42 -37.63H90.3L75.84 0ZM72.13 -7.81 75.97 -18.69H96.58L100.42 -7.81Z M117.57 0V-44.8H141.5Q150.78 -44.8 155.2 -41.5Q159.62 -38.21 159.62 -33.09Q159.62 -29.7 157.73 -27.04Q155.84 -24.38 152.26 -22.85Q148.67 -21.31 143.42 -21.31L144.7 -24.77Q149.95 -24.77 153.76 -23.3Q157.57 -21.82 159.65 -19.04Q161.73 -16.26 161.73 -12.35Q161.73 -6.53 156.9 -3.26Q152.06 0 142.78 0ZM132.42 -10.56H141.5Q144 -10.56 145.25 -11.46Q146.5 -12.35 146.5 -14.08Q146.5 -15.81 145.25 -16.7Q144 -17.6 141.5 -17.6H131.39V-27.58H139.46Q142.02 -27.58 143.2 -28.45Q144.38 -29.31 144.38 -30.91Q144.38 -32.58 143.2 -33.41Q142.02 -34.24 139.46 -34.24H132.42Z M167.68 0V-44.8H204.1V-33.41H182.53V-11.39H204.93V0ZM181.5 -17.28V-28.16H201.47V-17.28Z"/><path style="fill:var(--muted)" transform="translate(122 91.05)" d="M2.32 0V-13.3H7.09Q8.77 -13.3 9.96 -12.76Q11.16 -12.23 11.8 -11.23Q12.45 -10.23 12.45 -8.82Q12.45 -7.43 11.8 -6.43Q11.16 -5.42 9.96 -4.89Q8.77 -4.35 7.09 -4.35H2.86L3.29 -4.81V0ZM3.29 -4.76 2.86 -5.22H7.09Q9.23 -5.22 10.35 -6.17Q11.46 -7.11 11.46 -8.82Q11.46 -10.55 10.35 -11.49Q9.23 -12.43 7.09 -12.43H2.86L3.29 -12.89Z M23.91 0V-13.3H28.68Q31.19 -13.3 32.61 -12.12Q34.04 -10.94 34.04 -8.82Q34.04 -7.43 33.39 -6.43Q32.75 -5.43 31.55 -4.89Q30.36 -4.36 28.68 -4.36H24.45L24.88 -4.81V0ZM33.14 0 29.69 -4.83H30.79L34.24 0ZM24.88 -4.76 24.45 -5.21H28.68Q30.82 -5.21 31.94 -6.16Q33.05 -7.11 33.05 -8.82Q33.05 -10.55 31.94 -11.49Q30.82 -12.43 28.68 -12.43H24.45L24.88 -12.89Z M51.24 0.1Q49.75 0.1 48.49 -0.41Q47.22 -0.92 46.29 -1.83Q45.35 -2.75 44.83 -3.97Q44.32 -5.2 44.32 -6.65Q44.32 -8.1 44.83 -9.33Q45.35 -10.55 46.29 -11.47Q47.22 -12.38 48.49 -12.89Q49.75 -13.39 51.24 -13.39Q52.73 -13.39 53.99 -12.89Q55.25 -12.39 56.18 -11.47Q57.11 -10.56 57.63 -9.33Q58.15 -8.11 58.15 -6.65Q58.15 -5.19 57.63 -3.97Q57.11 -2.74 56.18 -1.83Q55.25 -0.91 53.99 -0.41Q52.73 0.1 51.24 0.1ZM51.24 -0.79Q52.5 -0.79 53.59 -1.23Q54.67 -1.67 55.48 -2.46Q56.28 -3.26 56.73 -4.32Q57.17 -5.39 57.17 -6.65Q57.17 -7.92 56.73 -8.98Q56.28 -10.04 55.48 -10.83Q54.67 -11.63 53.59 -12.07Q52.5 -12.51 51.24 -12.51Q49.97 -12.51 48.89 -12.07Q47.8 -11.63 46.99 -10.83Q46.19 -10.04 45.74 -8.98Q45.3 -7.91 45.3 -6.65Q45.3 -5.39 45.74 -4.33Q46.19 -3.26 46.99 -2.46Q47.8 -1.67 48.88 -1.23Q49.97 -0.79 51.24 -0.79Z M69.52 0V-13.3H74.78Q76.9 -13.3 78.49 -12.45Q80.09 -11.59 80.97 -10.09Q81.86 -8.59 81.86 -6.65Q81.86 -4.71 80.97 -3.21Q80.09 -1.71 78.49 -0.85Q76.9 0 74.78 0ZM70.5 -0.87H74.72Q76.6 -0.87 77.98 -1.61Q79.36 -2.36 80.12 -3.66Q80.88 -4.96 80.88 -6.65Q80.88 -8.35 80.12 -9.65Q79.36 -10.94 77.98 -11.69Q76.6 -12.43 74.72 -12.43H70.5Z M98.43 0.1Q95.96 0.1 94.53 -1.35Q93.11 -2.79 93.11 -5.64V-13.3H94.08V-5.67Q94.08 -3.19 95.22 -1.99Q96.36 -0.79 98.44 -0.79Q100.52 -0.79 101.66 -1.99Q102.8 -3.19 102.8 -5.67V-13.3H103.76V-5.64Q103.76 -2.79 102.34 -1.35Q100.91 0.1 98.43 0.1Z M121.92 0.1Q120.44 0.1 119.18 -0.41Q117.92 -0.91 116.99 -1.83Q116.05 -2.74 115.53 -3.97Q115.02 -5.19 115.02 -6.65Q115.02 -8.11 115.53 -9.33Q116.05 -10.56 116.99 -11.47Q117.92 -12.39 119.18 -12.89Q120.44 -13.39 121.93 -13.39Q123.32 -13.39 124.55 -12.94Q125.78 -12.48 126.66 -11.55L126.04 -10.92Q125.18 -11.77 124.15 -12.14Q123.12 -12.51 121.96 -12.51Q120.68 -12.51 119.59 -12.06Q118.51 -11.62 117.7 -10.83Q116.89 -10.03 116.44 -8.97Q116 -7.9 116 -6.65Q116 -5.4 116.44 -4.33Q116.89 -3.27 117.7 -2.47Q118.51 -1.68 119.59 -1.23Q120.68 -0.79 121.96 -0.79Q123.12 -0.79 124.15 -1.17Q125.18 -1.55 126.04 -2.4L126.66 -1.77Q125.78 -0.84 124.55 -0.37Q123.32 0.1 121.92 0.1Z M140.26 0V-12.43H135.47V-13.3H146.02V-12.43H141.24V0Z M156.42 0V-13.3H157.39V0Z M175.67 0.1Q174.19 0.1 172.92 -0.41Q171.66 -0.92 170.72 -1.83Q169.79 -2.75 169.27 -3.97Q168.75 -5.2 168.75 -6.65Q168.75 -8.1 169.27 -9.33Q169.79 -10.55 170.72 -11.47Q171.66 -12.38 172.92 -12.89Q174.18 -13.39 175.67 -13.39Q177.16 -13.39 178.42 -12.89Q179.68 -12.39 180.61 -11.47Q181.55 -10.56 182.07 -9.33Q182.59 -8.11 182.59 -6.65Q182.59 -5.19 182.07 -3.97Q181.55 -2.74 180.61 -1.83Q179.68 -0.91 178.42 -0.41Q177.16 0.1 175.67 0.1ZM175.67 -0.79Q176.94 -0.79 178.02 -1.23Q179.1 -1.67 179.91 -2.46Q180.71 -3.26 181.16 -4.32Q181.61 -5.39 181.61 -6.65Q181.61 -7.92 181.16 -8.98Q180.71 -10.04 179.91 -10.83Q179.11 -11.63 178.02 -12.07Q176.94 -12.51 175.67 -12.51Q174.4 -12.51 173.32 -12.07Q172.23 -11.63 171.43 -10.83Q170.62 -10.04 170.18 -8.98Q169.73 -7.91 169.73 -6.65Q169.73 -5.39 170.18 -4.33Q170.62 -3.26 171.43 -2.46Q172.23 -1.67 173.32 -1.23Q174.4 -0.79 175.67 -0.79Z M193.96 0V-13.3H194.77L204.26 -1.2H203.82V-13.3H204.79V0H203.98L194.49 -12.1H194.93V0Z"/></svg></a>
     <ul class="nav" id="nav">
       <li><a href="#home" data-nav="home">Trang chủ</a></li>
       <li><a href="#du-an" data-nav="du-an">Dự án</a></li>
       <li><a href="#bang-gia" data-nav="bang-gia">Bảng giá</a></li>
       <li><a href="#quy-trinh" data-nav="quy-trinh">Quy trình</a></li>
       <li><a href="#lien-he" data-nav="lien-he">Liên hệ</a></li>
+      <li class="nav-cta"><a class="btn small" href="#lien-he">Đặt lịch chụp</a></li>
     </ul>
-    <a class="btn small" href="#lien-he">Đặt lịch chụp</a>
+    <div class="head-actions">
+      <div class="lang" role="group" aria-label="Ngôn ngữ"><button type="button" data-lang="vi" aria-pressed="true">VI</button><button type="button" data-lang="en" aria-pressed="false">EN</button></div>
+      <a class="btn small head-cta" href="#lien-he">Đặt lịch chụp</a>
+      <button class="menu-btn" id="menu-btn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+    </div>
   </div>
 </header>
 
 <main>
 
 <!-- ================= TRANG CHỦ ================= -->
-<div data-view="home" data-title="MABE | Chụp ảnh catalog và lookbook">
+<div data-view="home" data-title="MABE | Chụp ảnh lookbook và catalog">
   <section class="hero">
     <div class="wrap hero-grid">
       <div>
         <h1>Ảnh sản phẩm chuẩn màu, bảng giá công khai, giao trong 3–5 ngày.</h1>
-        <p class="lead">MABE chụp ảnh catalog và lookbook cho thương hiệu thời trang và sản phẩm. Mỗi góc chụp nhắm vào điểm bán hàng của bạn, mỗi bức ảnh giữ đúng màu, chất liệu và phom dáng thật.</p>
+        <p class="lead">MABE chụp ảnh lookbook và catalog cho thương hiệu thời trang và sản phẩm. Mỗi góc chụp nhắm vào điểm bán hàng của bạn, mỗi bức ảnh giữ đúng màu, chất liệu và phom dáng thật.</p>
         <div class="cta-row">
           <a class="btn" href="#bang-gia">Xem bảng giá</a>
           <a class="btn line" href="#lien-he">Đặt lịch chụp</a>
         </div>
         <ul class="perks">
-          <li>Chụp thử 1 sản phẩm để bạn duyệt trước (catalog)</li>
           <li>Ảnh gốc đã lọc trong 24h (lookbook)</li>
+          <li>Chụp thử 1 sản phẩm để bạn duyệt trước (catalog)</li>
           <li>2 lần chỉnh sửa miễn phí</li>
           <li>Cọc 50%, nghiệm thu xong mới trả nốt</li>
         </ul>
@@ -51,15 +53,15 @@
       <div>
         <div class="mosaic">
           <div class="col">
-            <div class="ph tall"><img data-img="backpack" alt="Ba lô cuộn màu xanh rêu, ảnh catalog nền sáng"></div>
-            <div class="ph"><img data-img="serum" alt="Chai serum thủy tinh, ảnh catalog"></div>
+            <div class="ph tall"><img data-img="lb-1-1" alt="Váy chấm bi nâu dựa tường kem, ảnh lookbook"></div>
+            <div class="ph"><img data-img="lb-2-2" alt="Váy hoa kem, chân dung nghiêng, ảnh lookbook"></div>
           </div>
           <div class="col">
-            <div class="ph"><img data-img="sunglasses" alt="Kính mát gọng đồi mồi, ảnh catalog"></div>
-            <div class="ph tall"><img data-img="hoodie" alt="Áo hoodie xám, ảnh catalog"></div>
+            <div class="ph"><img data-img="lb-3-3" alt="Đầm đen trễ vai tựa lan can, ảnh lookbook"></div>
+            <div class="ph tall"><img data-img="lb-4-1" alt="Đầm be trễ vai bên cầu thang, ảnh lookbook"></div>
           </div>
         </div>
-        <p class="tagline">Ảnh mẫu minh họa phong cách catalog.</p>
+        <p class="tagline">Ảnh lookbook do MABE thực hiện.</p>
       </div>
     </div>
   </section>
@@ -70,24 +72,9 @@
       <div class="svc-grid">
         <article class="svc">
           <div class="strip">
-            <div class="ph"><img data-img="headphones" alt="Tai nghe, ảnh catalog"></div>
-            <div class="ph"><img data-img="mug" alt="Cốc gốm, ảnh catalog"></div>
-            <div class="ph"><img data-img="wallet" alt="Ví da, ảnh catalog"></div>
-          </div>
-          <h3>Chụp ảnh catalog sản phẩm</h3>
-          <p class="muted">Chụp hàng loạt, đồng nhất giữa các mã hàng, chính xác về màu sắc và chất liệu. Bạn gửi hàng về studio, MABE lo phần còn lại.</p>
-          <ul>
-            <li>Gói 4 góc, 6 góc hoặc tùy chỉnh</li>
-            <li>Phông trắng #FFFFFF, xám nhạt hoặc tách nền PNG</li>
-            <li>Có gói hỏa tốc, nhận ảnh trong 24h</li>
-          </ul>
-          <div class="row"><span class="from">Từ <b>400.000đ</b> / SKU</span><a class="btn line small" href="#bang-gia">Xem bảng giá catalog</a></div>
-        </article>
-        <article class="svc">
-          <div class="strip">
-            <div class="ph"><img data-img="shirt" alt="Áo sơ mi linen, ảnh lookbook"></div>
-            <div class="ph"><img data-img="tee" alt="Áo thun đen, ảnh lookbook"></div>
-            <div class="ph"><img data-img="sneaker" alt="Giày sneaker, ảnh lookbook"></div>
+            <div class="ph"><img data-img="look-lrc-12" alt="Váy be trên cầu thang gỗ, ảnh lookbook"></div>
+            <div class="ph"><img data-img="look-em-15" alt="Váy đen dáng xòe, ảnh lookbook"></div>
+            <div class="ph"><img data-img="look-lrc-17" alt="Váy hoa nhí trước tường kem, ảnh lookbook"></div>
           </div>
           <h3>Chụp ảnh lookbook</h3>
           <p class="muted">Concept, bối cảnh, người mẫu và trang phục được phối hợp trước khi bấm máy, để cả bộ sưu tập kể cùng một câu chuyện.</p>
@@ -97,6 +84,21 @@
             <li>Xem ảnh trực tiếp tại set hoặc duyệt nhanh online</li>
           </ul>
           <div class="row"><span class="from">Từ <b>600.000đ</b> / look</span><a class="btn line small" href="#bang-gia">Xem bảng giá lookbook</a></div>
+        </article>
+        <article class="svc">
+          <div class="strip">
+            <div class="ph"><img data-img="cat-xanh-nhat" alt="Bộ hộp xanh nhạt, ảnh catalog bao bì"></div>
+            <div class="ph"><img data-img="cat-hop-hong" alt="Hộp hồng có ngăn kéo, ảnh catalog bao bì"></div>
+            <div class="ph"><img data-img="cat-tui-pema" alt="Túi giấy xanh navy quai vàng, ảnh catalog bao bì"></div>
+          </div>
+          <h3>Chụp ảnh catalog sản phẩm</h3>
+          <p class="muted">Chụp hàng loạt, đồng nhất giữa các mã hàng, chính xác về màu sắc và chất liệu. Bạn gửi hàng về studio, MABE lo phần còn lại.</p>
+          <ul>
+            <li>Gói 4 góc, 6 góc hoặc tùy chỉnh</li>
+            <li>Phông trắng #FFFFFF, xám nhạt hoặc tách nền PNG</li>
+            <li>Có gói hỏa tốc, nhận ảnh trong 24h</li>
+          </ul>
+          <div class="row"><span class="from">Từ <b>400.000đ</b> / SKU</span><a class="btn line small" href="#bang-gia">Xem bảng giá catalog</a></div>
         </article>
       </div>
     </div>
@@ -116,16 +118,22 @@
 
   <section class="block soft">
     <div class="wrap">
-      <div class="sec-head"><h2>Ảnh mẫu: cùng ánh sáng, cùng tỷ lệ, cùng một chuẩn.</h2><p class="muted">Cả bộ catalog đồng nhất 100%. Mỗi ảnh được đặt tên theo mã SKU của bạn.</p></div>
+      <div class="sec-head"><h2>Ảnh mẫu: cùng ánh sáng, cùng tỷ lệ, cùng một chuẩn.</h2><p class="muted">Cả bộ lookbook đồng nhất về ánh sáng và tone màu. Mỗi ảnh được đặt tên theo từng look.</p></div>
       <div class="gal">
-        <div class="ph"><img data-img="candle" alt="Nến thơm hũ thủy tinh nâu"></div>
-        <div class="ph"><img data-img="tote" alt="Túi tote vải canvas"></div>
-        <div class="ph"><img data-img="vase" alt="Bình gốm thủ công"></div>
-        <div class="ph"><img data-img="lipbalm" alt="Bộ ba son dưỡng ống giấy"></div>
-        <div class="ph"><img data-img="mug" alt="Cốc gốm lốm đốm"></div>
-        <div class="ph"><img data-img="backpack" alt="Ba lô cuộn xanh rêu"></div>
+        <div class="ph"><img data-img="lb-1-1" alt="Váy chấm bi nâu dựa tường kem, ảnh lookbook" loading="lazy"></div>
+        <div class="ph"><img data-img="lb-1-2" alt="Váy chấm bi nâu, chân dung, ảnh lookbook" loading="lazy"></div>
+        <div class="ph"><img data-img="lb-2-1" alt="Váy hoa kem dựa tường, ảnh lookbook" loading="lazy"></div>
+        <div class="ph"><img data-img="lb-2-2" alt="Váy hoa kem, chân dung nghiêng, ảnh lookbook" loading="lazy"></div>
+        <div class="ph"><img data-img="lb-3-1" alt="Đầm đen trễ vai bên cầu thang gỗ, ảnh lookbook" loading="lazy"></div>
+        <div class="ph"><img data-img="lb-3-2" alt="Đầm đen trễ vai tựa tường bên cầu thang, ảnh lookbook" loading="lazy"></div>
+        <div class="ph"><img data-img="lb-4-1" alt="Đầm be trễ vai bên cầu thang, ảnh lookbook" loading="lazy"></div>
+        <div class="ph"><img data-img="lb-4-2" alt="Đầm be trễ vai, toàn thân, ảnh lookbook" loading="lazy"></div>
+        <div class="ph"><img data-img="lb-1-3" alt="Váy chấm bi nâu, nhìn nghiêng, ảnh lookbook" loading="lazy"></div>
+        <div class="ph"><img data-img="lb-2-3" alt="Váy hoa kem, nhìn nghiêng, ảnh lookbook" loading="lazy"></div>
+        <div class="ph"><img data-img="lb-3-4" alt="Đầm đen trễ vai, dáng tựa lan can, ảnh lookbook" loading="lazy"></div>
+        <div class="ph"><img data-img="lb-4-3" alt="Đầm be trễ vai, dáng ngồi, ảnh lookbook" loading="lazy"></div>
       </div>
-      <p class="tagline">Ảnh minh họa từ bộ dữ liệu mẫu CC0, không phải sản phẩm của khách hàng MABE.</p>
+      <p class="tagline">Ảnh lookbook do MABE thực hiện.</p>
       <p style="margin-top:24px"><a class="btn" href="#du-an">Xem dự án và đối tác</a></p>
     </div>
   </section>
@@ -134,10 +142,10 @@
     <div class="wrap">
       <div class="sec-head"><h2>Giá công khai, chốt trước khi chụp.</h2><p class="muted">Bạn có thể tính nhanh chi phí ngay trên trang bảng giá.</p></div>
       <div class="teaser">
-        <div class="tz"><small>Catalog, Tiêu chuẩn</small><div class="p">400.000đ <span>/ SKU</span></div><p>4 tấm: trước, sau, trái, phải.</p></div>
-        <div class="tz"><small>Catalog, Nâng cao</small><div class="p">500.000đ <span>/ SKU</span></div><p>6 tấm, thêm góc trên và chi tiết.</p></div>
         <div class="tz"><small>Lookbook, Tiêu chuẩn</small><div class="p">600.000đ <span>/ look</span></div><p>4 tấm: full người, 2 chân dung, 1 cận chất liệu.</p></div>
         <div class="tz"><small>Lookbook, Nâng cao</small><div class="p">750.000đ <span>/ look</span></div><p>6 tấm: 2 full người, 2 chân dung, 2 cận chất liệu.</p></div>
+        <div class="tz"><small>Catalog, Tiêu chuẩn</small><div class="p">400.000đ <span>/ SKU</span></div><p>4 tấm: trước, sau, trái, phải.</p></div>
+        <div class="tz"><small>Catalog, Nâng cao</small><div class="p">500.000đ <span>/ SKU</span></div><p>6 tấm, thêm góc trên và chi tiết.</p></div>
       </div>
       <p style="margin-top:24px"><a class="btn" href="#bang-gia">Xem toàn bộ bảng giá</a></p>
     </div>
@@ -172,7 +180,7 @@
   <section class="page-head">
     <div class="wrap">
       <h1>Dự án và đối tác</h1>
-      <p class="lead">Những bộ ảnh catalog và lookbook MABE thực hiện, cùng các thương hiệu đã đồng hành.</p>
+      <p class="lead">Những bộ ảnh lookbook và catalog MABE thực hiện, cùng các thương hiệu đã đồng hành.</p>
       <p class="note-flag"><b>Nội dung mẫu.</b> Dự án, tên thương hiệu và logo ở trang này chỉ để minh họa bố cục. Khi MABE có dự án thật, thay bằng ảnh, tên và logo thật (nhớ xin phép đối tác).</p>
     </div>
   </section>
@@ -182,34 +190,22 @@
       <div class="proj-top">
         <h2 style="margin:0">Dự án tiêu biểu</h2>
         <div class="seg" role="group" aria-label="Lọc dự án">
-          <button type="button" data-f="all" aria-pressed="true">Tất cả</button>
+          <button type="button" data-f="look" aria-pressed="true">Lookbook</button>
           <button type="button" data-f="cat" aria-pressed="false">Catalog</button>
-          <button type="button" data-f="look" aria-pressed="false">Lookbook</button>
+          <button type="button" data-f="life" aria-pressed="false">Product lifestyle</button>
         </div>
       </div>
-      <div class="proj-grid" id="proj-grid"></div>
+      <div class="proj-grid" id="proj-grid" data-dyn></div>
     </div>
   </section>
 
   <section class="block soft">
     <div class="wrap">
-      <div class="sec-head"><h2>Đối tác và thương hiệu đã đồng hành.</h2><p class="muted">Logo thật sẽ được thêm khi MABE được phép hiển thị.</p></div>
+      <div class="sec-head"><h2>Đối tác và thương hiệu đã đồng hành.</h2></div>
       <div class="partners">
-        <div class="partner"><span class="mono">A</span>Logo đối tác</div>
-        <div class="partner"><span class="mono">B</span>Logo đối tác</div>
-        <div class="partner"><span class="mono">C</span>Logo đối tác</div>
-        <div class="partner"><span class="mono">D</span>Logo đối tác</div>
-        <div class="partner"><span class="mono">E</span>Logo đối tác</div>
-        <div class="partner"><span class="mono">F</span>Logo đối tác</div>
-      </div>
-    </div>
-  </section>
-
-  <section class="block">
-    <div class="wrap">
-      <div class="cta-band">
-        <div><h2>Muốn dự án của bạn xuất hiện ở đây?</h2><p>Xem bảng giá công khai rồi đặt lịch chụp thử.</p></div>
-        <div style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn" href="#bang-gia">Xem bảng giá</a><a class="btn line" href="#lien-he">Đặt lịch chụp</a></div>
+        <figure class="partner"><div class="logo-tile"><img src="assets/images/clientlogo3.jpeg" alt="Em Tấm" loading="lazy"></div></figure>
+        <figure class="partner"><div class="logo-tile"><img src="assets/images/clientlogo2-web.png" alt="Vietpacking Plus" loading="lazy"></div></figure>
+        <figure class="partner"><div class="logo-tile"><img src="assets/images/clientlogo1.jpeg" alt="Street Soul Sneakers" loading="lazy"></div></figure>
       </div>
     </div>
   </section>
@@ -219,13 +215,12 @@
       <div class="pd-media"><div class="main"><img id="pd-main" alt=""></div><div class="pd-thumbs" id="pd-thumbs"></div></div>
       <div class="pd-info">
         <button class="pd-close" type="button" id="pd-close" aria-label="Đóng">×</button>
-        <span class="chip" id="pd-type"></span>
-        <h3 id="pd-title"></h3>
-        <dl id="pd-dl"></dl>
-        <h4>Thử thách</h4><p id="pd-c"></p>
-        <h4>Cách MABE thực hiện</h4><p id="pd-a"></p>
-        <h4>Bàn giao</h4><p id="pd-r"></p>
-        <p style="margin-top:22px"><a class="btn" href="#lien-he" id="pd-cta">Đặt lịch chụp tương tự</a></p>
+        <span class="chip" id="pd-type" data-dyn></span>
+        <h3 id="pd-title" data-dyn></h3>
+        <dl id="pd-dl" data-dyn></dl>
+        <h4>Thử thách</h4><p id="pd-c" data-dyn></p>
+        <h4 id="pd-req-h" hidden>Yêu cầu riêng</h4><p id="pd-req" data-dyn hidden></p>
+        <p class="pd-note">Hình ảnh được thực hiện bởi MABE và thuộc sở hữu bản quyền bởi khách hàng ở trên.</p>
       </div>
     </div>
   </dialog>
@@ -249,47 +244,31 @@
         <div class="est">
           <div>
             <div class="seg" role="group" aria-label="Chọn dịch vụ">
-              <button type="button" id="m-cat" aria-pressed="true">Catalog</button>
-              <button type="button" id="m-look" aria-pressed="false">Lookbook</button>
+              <button type="button" id="m-look" aria-pressed="true">Lookbook</button>
+              <button type="button" id="m-cat" aria-pressed="false">Catalog</button>
             </div>
 
-            <div id="f-cat">
-              <div class="field"><label for="c-sku">Số sản phẩm (SKU)</label><input id="c-sku" type="number" min="1" value="30" inputmode="numeric"></div>
-              <div class="field"><label for="c-pack">Gói chụp</label><select id="c-pack"><option value="400000" data-n="4">Tiêu chuẩn, 4 tấm, 400.000đ / SKU</option><option value="500000" data-n="6">Nâng cao, 6 tấm, 500.000đ / SKU</option></select></div>
-              <p class="note-box">Từ 20 sản phẩm trở lên, MABE có chiết khấu riêng trong gói Thiết kế riêng. Gói này, hỏa tốc và kỹ thuật đặc thù được báo giá riêng.</p>
-            </div>
-
-            <div id="f-look" hidden>
+            <div id="f-look">
               <div class="field"><label for="l-look">Số look</label><input id="l-look" type="number" min="1" value="10" inputmode="numeric"></div>
               <div class="field"><label for="l-tier">Gói lookbook</label><select id="l-tier"><option value="600000" data-n="4">Tiêu chuẩn, 4 tấm, 600.000đ / look</option><option value="750000" data-n="6">Nâng cao, 6 tấm, 750.000đ / look</option></select></div>
               <p class="note-box">Từ 15–20 look trở lên có chiết khấu bậc thang trong gói Thiết kế riêng. Người mẫu, MUA, stylist, video, chụp outdoor được báo giá riêng.</p>
+            </div>
+
+            <div id="f-cat" hidden>
+              <div class="field"><label for="c-sku">Số sản phẩm (SKU)</label><input id="c-sku" type="number" min="1" value="30" inputmode="numeric"></div>
+              <div class="field"><label for="c-pack">Gói chụp</label><select id="c-pack"><option value="400000" data-n="4">Tiêu chuẩn, 4 tấm, 400.000đ / SKU</option><option value="500000" data-n="6">Nâng cao, 6 tấm, 500.000đ / SKU</option></select></div>
+              <p class="note-box">Từ 20 sản phẩm trở lên, MABE có chiết khấu riêng trong gói Thiết kế riêng. Gói này, hỏa tốc và kỹ thuật đặc thù được báo giá riêng.</p>
             </div>
           </div>
 
           <div class="result-box" aria-live="polite">
             <span class="muted">Ước tính tổng</span>
-            <div class="total" id="r-total">0đ</div>
-            <dl id="r-list"></dl>
+            <div class="total" id="r-total" data-dyn>0đ</div>
+            <dl id="r-list" data-dyn></dl>
             <a class="btn" href="#lien-he" style="width:100%">Nhắn MABE để chốt giá</a>
-            <p class="hint">Cọc 50% giữ lịch: <b id="r-dep">0đ</b></p>
+            <p class="hint">Cọc 50% giữ lịch: <b id="r-dep" data-dyn>0đ</b></p>
           </div>
         </div>
-      </div>
-
-      <!-- Catalog -->
-      <div class="pk-sec">
-        <div class="pk-title"><h2>Catalog sản phẩm</h2><span class="muted">Tính theo số sản phẩm (SKU).</span></div>
-        <div class="tiers">
-          <div class="tier"><h3>Tiêu chuẩn</h3><div class="for">Đủ thông tin cho sàn thương mại điện tử, đăng bán nhanh.</div><div class="price">400.000đ <small>/ SKU</small></div><ul><li>4 tấm mỗi SKU</li><li>4 góc: trước, sau, trái, phải</li></ul><a class="btn line" href="#lien-he">Chọn gói Tiêu chuẩn</a></div>
-          <div class="tier pop"><span class="pop-tag">Bán chạy nhất</span><h3>Nâng cao</h3><div class="for">Thêm góc trên và góc chi tiết để khách xem kỹ, hỏi ít hơn.</div><div class="price">500.000đ <small>/ SKU</small></div><ul><li>6 tấm mỗi SKU</li><li>6 góc: trước, sau, trái, phải, trên, chi tiết</li></ul><a class="btn" href="#lien-he">Chọn gói Nâng cao</a></div>
-          <div class="tier"><h3>Thiết kế riêng</h3><div class="for">Số lượng lớn hoặc yêu cầu kỹ thuật đặc thù.</div><div class="price">Báo giá riêng</div><ul><li>Chiết khấu riêng từ 20 sản phẩm</li><li>Tăng giảm số góc ngoài khung 4–6 tấm</li><li>Kỹ thuật chụp và hậu kỳ đặc thù</li></ul><a class="btn line" href="#lien-he">Nhận báo giá</a></div>
-        </div>
-
-        <div class="incl"><b>Mọi gói catalog đều có:</b><ul>
-          <li>Video mở kiện và kiểm đếm sản phẩm</li><li>Ủi phẳng trang phục, lau bụi và vân tay</li>
-          <li>Cân bằng trắng theo màu thật của sản phẩm</li><li>Xóa bụi, vết xước nhỏ, crop đồng đều</li>
-          <li>File đặt tên và phân thư mục theo mã SKU</li><li>Đóng gói hoàn trả sản phẩm nguyên vẹn</li>
-        </ul></div>
       </div>
 
       <!-- Lookbook -->
@@ -307,6 +286,21 @@
         </ul></div>
       </div>
 
+      <!-- Catalog -->
+      <div class="pk-sec">
+        <div class="pk-title"><h2>Catalog sản phẩm</h2><span class="muted">Tính theo số sản phẩm (SKU).</span></div>
+        <div class="tiers">
+          <div class="tier"><h3>Tiêu chuẩn</h3><div class="for">Đủ thông tin cho sàn thương mại điện tử, đăng bán nhanh.</div><div class="price">400.000đ <small>/ SKU</small></div><ul><li>4 tấm mỗi SKU</li><li>4 góc: trước, sau, trái, phải</li></ul><a class="btn line" href="#lien-he">Chọn gói Tiêu chuẩn</a></div>
+          <div class="tier pop"><span class="pop-tag">Bán chạy nhất</span><h3>Nâng cao</h3><div class="for">Thêm góc trên và góc chi tiết để khách xem kỹ, hỏi ít hơn.</div><div class="price">500.000đ <small>/ SKU</small></div><ul><li>6 tấm mỗi SKU</li><li>6 góc: trước, sau, trái, phải, trên, chi tiết</li></ul><a class="btn" href="#lien-he">Chọn gói Nâng cao</a></div>
+          <div class="tier"><h3>Thiết kế riêng</h3><div class="for">Số lượng lớn hoặc yêu cầu kỹ thuật đặc thù.</div><div class="price">Báo giá riêng</div><ul><li>Chiết khấu riêng từ 20 sản phẩm</li><li>Tăng giảm số góc ngoài khung 4–6 tấm</li><li>Kỹ thuật chụp và hậu kỳ đặc thù</li></ul><a class="btn line" href="#lien-he">Nhận báo giá</a></div>
+        </div>
+
+        <div class="incl"><b>Mọi gói catalog đều có:</b><ul>
+          <li>Video mở kiện và kiểm đếm sản phẩm</li><li>Ủi phẳng trang phục, lau bụi và vân tay</li>
+          <li>Cân bằng trắng theo màu thật của sản phẩm</li><li>Xóa bụi, vết xước nhỏ, crop đồng đều</li>
+          <li>File đặt tên và phân thư mục theo mã SKU</li><li>Đóng gói hoàn trả sản phẩm nguyên vẹn</li>
+        </ul></div>
+      </div>
     </div>
   </section>
 </div>
@@ -323,23 +317,23 @@
   <section class="block">
     <div class="wrap">
       <div class="seg seg-wrap" role="group" aria-label="Chọn dịch vụ">
-        <button type="button" id="s-cat" aria-pressed="true">Catalog</button>
-        <button type="button" id="s-look" aria-pressed="false">Lookbook</button>
+        <button type="button" id="s-look" aria-pressed="true">Lookbook</button>
+        <button type="button" id="s-cat" aria-pressed="false">Catalog</button>
       </div>
-      <p class="muted" id="s-note"></p>
+      <p class="muted" id="s-note" data-dyn></p>
 
       <div class="stepper" id="stepper">
-        <div class="track" id="track">
+        <div class="track" id="track" data-dyn>
           <div class="track-line"><div class="fill" id="fill"></div></div>
         </div>
         <div class="stage" id="stage">
           <div class="stage-text">
-            <h3 id="st-title"></h3>
-            <ul id="st-list"></ul>
-            <div class="chips" id="st-chips"></div>
+            <h3 id="st-title" data-dyn></h3>
+            <ul id="st-list" data-dyn></ul>
+            <div class="chips" id="st-chips" data-dyn></div>
             <div class="timer" id="timer"><i id="timer-i"></i></div>
             <div class="ctrls">
-              <span class="count" id="st-count"></span>
+              <span class="count" id="st-count" data-dyn></span>
             </div>
           </div>
           <div class="stage-img"><img id="st-img" alt=""></div>
@@ -363,19 +357,47 @@
   <section class="page-head">
     <div class="wrap">
       <h1>Đặt lịch chụp</h1>
-      <p class="lead">Nhắn trực tiếp cho MABE qua Zalo để được tư vấn và đặt lịch.</p>
+      <p class="lead">Nhắn trực tiếp cho MABE qua Zalo, Telegram, WhatsApp, email hoặc Instagram để được tư vấn và đặt lịch.</p>
     </div>
   </section>
   <section class="block">
-    <div class="wrap contact-single">
-      <div>
-        <h2>Nhắn trực tiếp qua Zalo</h2>
-        <p class="muted">MABE trả lời sớm trong giờ làm việc.</p>
-        <div style="margin-top:20px">
-          <div class="person"><div><b>Thành</b><span>0703 897 267</span></div><a class="btn zalo" href="https://zalo.me/0703897267">Nhắn Zalo</a></div>
-          <div class="person"><div><b>Như</b><span>0828 823 623</span></div><a class="btn zalo" href="https://zalo.me/0828823623">Nhắn Zalo</a></div>
+    <div class="wrap contact-grid">
+      <div class="contact-left">
+        <div>
+          <h2>Số điện thoại</h2>
+          <p class="muted">MABE trả lời sớm trong giờ làm việc.</p>
+          <div style="margin-top:20px">
+            <div class="person multi"><div><b>Thành</b><span>0703 897 267</span></div>
+              <div class="btn-row">
+                <a class="btn zalo" href="https://zalo.me/0703897267" target="_blank" rel="noopener">Zalo</a>
+                <a class="btn tg" href="https://t.me/+84703897267" target="_blank" rel="noopener">Telegram</a>
+                <a class="btn wa" href="https://wa.me/84703897267" target="_blank" rel="noopener">WhatsApp</a>
+              </div>
+            </div>
+            <div class="person multi"><div><b>Như</b><span>0828 823 623</span></div>
+              <div class="btn-row"><a class="btn zalo" href="https://zalo.me/0828823623" target="_blank" rel="noopener">Zalo</a></div>
+            </div>
+          </div>
         </div>
-        <p class="note-box" style="margin-top:20px">Mới có Zalo. Email và Instagram sẽ cập nhật khi MABE tạo xong.</p>
+        <div class="contact-ig">
+          <h2>Instagram</h2>
+          <div style="margin-top:20px">
+            <div class="person"><div><b>Instagram</b><span>@mabeproduction</span></div><a class="btn line" href="https://instagram.com/mabeproduction" target="_blank" rel="noopener">Xem Instagram</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-right">
+        <h2>Email</h2>
+        <p class="muted">Gửi yêu cầu, bảng giá hoặc brief dự án qua email.</p>
+        <div style="margin-top:20px">
+          <div class="person multi"><div><b>Email</b><span id="mail-addr">mabe.product@gmail.com</span></div>
+            <div class="btn-row">
+              <button class="btn line" type="button" id="copy-mail">Sao chép email</button>
+              <a class="btn" href="mailto:mabe.product@gmail.com">Gửi mail</a>
+            </div>
+          </div>
+        </div>
+        <p class="copy-note" id="copy-note" role="status" aria-live="polite" data-dyn></p>
       </div>
     </div>
   </section>
@@ -384,14 +406,24 @@
 </main>
 
 <footer>
-  <div class="wrap">
-    <div><b style="color:var(--ink)">MABE</b><br>Chụp ảnh catalog và lookbook, TP.HCM</div>
-    <div>Zalo: 0703 897 267 (Thành), 0828 823 623 (Như)</div>
-    <div>Ảnh mẫu: bộ dữ liệu <a href="https://github.com/iShowkot/ecommerce-sample-data">ecommerce-sample-data</a>, giấy phép CC0</div>
+  <div class="wrap foot">
+    <div class="f-logo-row"><svg class="f-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 345.1 101" aria-hidden="true" focusable="false"><g transform="translate(16 25) scale(1)"><path style="fill:var(--ink)" fill-rule="evenodd" d="M4 0H76A4 4 0 0 1 80 4V56A4 4 0 0 1 76 60H4A4 4 0 0 1 0 56V4A4 4 0 0 1 4 0ZM12 -9H38V0H12ZM21 31a19 19 0 1 0 38 0a19 19 0 1 0 -38 0ZM64 8H72V14H64Z"/><circle cx="40" cy="31" r="10" style="fill:var(--brand)"/></g><path style="fill:var(--ink)" transform="translate(122 63.75)" d="M3.65 0V-44.8H16.06L33.98 -15.55H27.46L44.86 -44.8H57.28L57.41 0H43.65L43.52 -24.06H45.7L33.79 -4.03H27.14L14.72 -24.06H17.41V0Z M60.48 0 80.06 -44.8H94.91L114.5 0H98.88L84.42 -37.63H90.3L75.84 0ZM72.13 -7.81 75.97 -18.69H96.58L100.42 -7.81Z M117.57 0V-44.8H141.5Q150.78 -44.8 155.2 -41.5Q159.62 -38.21 159.62 -33.09Q159.62 -29.7 157.73 -27.04Q155.84 -24.38 152.26 -22.85Q148.67 -21.31 143.42 -21.31L144.7 -24.77Q149.95 -24.77 153.76 -23.3Q157.57 -21.82 159.65 -19.04Q161.73 -16.26 161.73 -12.35Q161.73 -6.53 156.9 -3.26Q152.06 0 142.78 0ZM132.42 -10.56H141.5Q144 -10.56 145.25 -11.46Q146.5 -12.35 146.5 -14.08Q146.5 -15.81 145.25 -16.7Q144 -17.6 141.5 -17.6H131.39V-27.58H139.46Q142.02 -27.58 143.2 -28.45Q144.38 -29.31 144.38 -30.91Q144.38 -32.58 143.2 -33.41Q142.02 -34.24 139.46 -34.24H132.42Z M167.68 0V-44.8H204.1V-33.41H182.53V-11.39H204.93V0ZM181.5 -17.28V-28.16H201.47V-17.28Z"/><path style="fill:var(--muted)" transform="translate(122 91.05)" d="M2.32 0V-13.3H7.09Q8.77 -13.3 9.96 -12.76Q11.16 -12.23 11.8 -11.23Q12.45 -10.23 12.45 -8.82Q12.45 -7.43 11.8 -6.43Q11.16 -5.42 9.96 -4.89Q8.77 -4.35 7.09 -4.35H2.86L3.29 -4.81V0ZM3.29 -4.76 2.86 -5.22H7.09Q9.23 -5.22 10.35 -6.17Q11.46 -7.11 11.46 -8.82Q11.46 -10.55 10.35 -11.49Q9.23 -12.43 7.09 -12.43H2.86L3.29 -12.89Z M23.91 0V-13.3H28.68Q31.19 -13.3 32.61 -12.12Q34.04 -10.94 34.04 -8.82Q34.04 -7.43 33.39 -6.43Q32.75 -5.43 31.55 -4.89Q30.36 -4.36 28.68 -4.36H24.45L24.88 -4.81V0ZM33.14 0 29.69 -4.83H30.79L34.24 0ZM24.88 -4.76 24.45 -5.21H28.68Q30.82 -5.21 31.94 -6.16Q33.05 -7.11 33.05 -8.82Q33.05 -10.55 31.94 -11.49Q30.82 -12.43 28.68 -12.43H24.45L24.88 -12.89Z M51.24 0.1Q49.75 0.1 48.49 -0.41Q47.22 -0.92 46.29 -1.83Q45.35 -2.75 44.83 -3.97Q44.32 -5.2 44.32 -6.65Q44.32 -8.1 44.83 -9.33Q45.35 -10.55 46.29 -11.47Q47.22 -12.38 48.49 -12.89Q49.75 -13.39 51.24 -13.39Q52.73 -13.39 53.99 -12.89Q55.25 -12.39 56.18 -11.47Q57.11 -10.56 57.63 -9.33Q58.15 -8.11 58.15 -6.65Q58.15 -5.19 57.63 -3.97Q57.11 -2.74 56.18 -1.83Q55.25 -0.91 53.99 -0.41Q52.73 0.1 51.24 0.1ZM51.24 -0.79Q52.5 -0.79 53.59 -1.23Q54.67 -1.67 55.48 -2.46Q56.28 -3.26 56.73 -4.32Q57.17 -5.39 57.17 -6.65Q57.17 -7.92 56.73 -8.98Q56.28 -10.04 55.48 -10.83Q54.67 -11.63 53.59 -12.07Q52.5 -12.51 51.24 -12.51Q49.97 -12.51 48.89 -12.07Q47.8 -11.63 46.99 -10.83Q46.19 -10.04 45.74 -8.98Q45.3 -7.91 45.3 -6.65Q45.3 -5.39 45.74 -4.33Q46.19 -3.26 46.99 -2.46Q47.8 -1.67 48.88 -1.23Q49.97 -0.79 51.24 -0.79Z M69.52 0V-13.3H74.78Q76.9 -13.3 78.49 -12.45Q80.09 -11.59 80.97 -10.09Q81.86 -8.59 81.86 -6.65Q81.86 -4.71 80.97 -3.21Q80.09 -1.71 78.49 -0.85Q76.9 0 74.78 0ZM70.5 -0.87H74.72Q76.6 -0.87 77.98 -1.61Q79.36 -2.36 80.12 -3.66Q80.88 -4.96 80.88 -6.65Q80.88 -8.35 80.12 -9.65Q79.36 -10.94 77.98 -11.69Q76.6 -12.43 74.72 -12.43H70.5Z M98.43 0.1Q95.96 0.1 94.53 -1.35Q93.11 -2.79 93.11 -5.64V-13.3H94.08V-5.67Q94.08 -3.19 95.22 -1.99Q96.36 -0.79 98.44 -0.79Q100.52 -0.79 101.66 -1.99Q102.8 -3.19 102.8 -5.67V-13.3H103.76V-5.64Q103.76 -2.79 102.34 -1.35Q100.91 0.1 98.43 0.1Z M121.92 0.1Q120.44 0.1 119.18 -0.41Q117.92 -0.91 116.99 -1.83Q116.05 -2.74 115.53 -3.97Q115.02 -5.19 115.02 -6.65Q115.02 -8.11 115.53 -9.33Q116.05 -10.56 116.99 -11.47Q117.92 -12.39 119.18 -12.89Q120.44 -13.39 121.93 -13.39Q123.32 -13.39 124.55 -12.94Q125.78 -12.48 126.66 -11.55L126.04 -10.92Q125.18 -11.77 124.15 -12.14Q123.12 -12.51 121.96 -12.51Q120.68 -12.51 119.59 -12.06Q118.51 -11.62 117.7 -10.83Q116.89 -10.03 116.44 -8.97Q116 -7.9 116 -6.65Q116 -5.4 116.44 -4.33Q116.89 -3.27 117.7 -2.47Q118.51 -1.68 119.59 -1.23Q120.68 -0.79 121.96 -0.79Q123.12 -0.79 124.15 -1.17Q125.18 -1.55 126.04 -2.4L126.66 -1.77Q125.78 -0.84 124.55 -0.37Q123.32 0.1 121.92 0.1Z M140.26 0V-12.43H135.47V-13.3H146.02V-12.43H141.24V0Z M156.42 0V-13.3H157.39V0Z M175.67 0.1Q174.19 0.1 172.92 -0.41Q171.66 -0.92 170.72 -1.83Q169.79 -2.75 169.27 -3.97Q168.75 -5.2 168.75 -6.65Q168.75 -8.1 169.27 -9.33Q169.79 -10.55 170.72 -11.47Q171.66 -12.38 172.92 -12.89Q174.18 -13.39 175.67 -13.39Q177.16 -13.39 178.42 -12.89Q179.68 -12.39 180.61 -11.47Q181.55 -10.56 182.07 -9.33Q182.59 -8.11 182.59 -6.65Q182.59 -5.19 182.07 -3.97Q181.55 -2.74 180.61 -1.83Q179.68 -0.91 178.42 -0.41Q177.16 0.1 175.67 0.1ZM175.67 -0.79Q176.94 -0.79 178.02 -1.23Q179.1 -1.67 179.91 -2.46Q180.71 -3.26 181.16 -4.32Q181.61 -5.39 181.61 -6.65Q181.61 -7.92 181.16 -8.98Q180.71 -10.04 179.91 -10.83Q179.11 -11.63 178.02 -12.07Q176.94 -12.51 175.67 -12.51Q174.4 -12.51 173.32 -12.07Q172.23 -11.63 171.43 -10.83Q170.62 -10.04 170.18 -8.98Q169.73 -7.91 169.73 -6.65Q169.73 -5.39 170.18 -4.33Q170.62 -3.26 171.43 -2.46Q172.23 -1.67 173.32 -1.23Q174.4 -0.79 175.67 -0.79Z M193.96 0V-13.3H194.77L204.26 -1.2H203.82V-13.3H204.79V0H203.98L194.49 -12.1H194.93V0Z"/></svg></div>
+    <div class="f-row">
+    <div class="f-col"><span>Chụp ảnh lookbook và catalog, TP.HCM</span></div>
+    <div class="f-col">
+      <span>Zalo: 0703 897 267 (Thành)</span>
+      <span>Zalo: 0828 823 623 (Như)</span>
+    </div>
+    <div class="f-col">
+      <a href="mailto:mabe.product@gmail.com">mabe.product@gmail.com</a>
+      <a href="https://instagram.com/mabeproduction" target="_blank" rel="noopener">IG: @mabeproduction</a>
+    </div>
+    </div>
   </div>
 </footer>
 <a class="sticky-zalo" href="https://zalo.me/0703897267">Zalo</a>
 
+<script src="js/i18n.js"></script>
 <script src="js/app.js"></script>
 </body>
 </html>
