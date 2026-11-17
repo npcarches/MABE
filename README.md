@@ -1,52 +1,92 @@
 # MABE — Website chụp ảnh catalog và lookbook
 
-Website tĩnh nhiều trang (HTML, CSS, JavaScript thuần), không cần cài đặt gì.
+Website Next.js (App Router, TypeScript), xuất ra HTML tĩnh: chạy `npm run build` là có thư mục `out/` để đưa lên bất kỳ hosting tĩnh nào. Không có form, không có máy chủ, không gửi dữ liệu đi đâu.
+
+## Cài đặt và chạy
+
+Cần Node.js 20.9 trở lên.
+
+```bash
+npm install
+npm run dev        # http://localhost:3000, tự tải lại khi sửa code
+```
+
+| Lệnh | Việc |
+|---|---|
+| `npm run dev` | Chạy bản phát triển |
+| `npm run build` | Nén ảnh thành WebP rồi xuất web tĩnh vào `out/` |
+| `npm start` | Xem thử bản đã build (`out/`) |
+| `npm run images` | Chỉ nén ảnh gốc thành WebP (dùng khi chạy `npm run dev` sau khi thêm ảnh) |
+| `npm run lint` / `npm run typecheck` | Kiểm tra code |
+
+## Đưa lên mạng (Cloudflare Pages)
+
+Kết nối repo GitHub với Cloudflare Pages (Workers & Pages → Create → Pages → Connect to Git), rồi điền:
+
+| Mục | Giá trị |
+|---|---|
+| Framework preset | None |
+| Build command | `npm run build` |
+| Build output directory | `out` |
+| Production branch | `main` |
+
+Phiên bản Node lấy từ file `.node-version` (20). Mỗi lần push lên `main`, Cloudflare tự nén ảnh sang WebP, build và đưa web lên; nhánh khác có link xem thử riêng.
+
+Ảnh WebP (`public/images/`) không lưu trong git, chỉ ảnh gốc trong `media-src/images/`. Khi chạy `npm run dev` ở máy mới, chạy `npm run images` một lần trước để có ảnh.
+
+Hosting tĩnh khác: chạy `npm run build` rồi tải nội dung thư mục `out/` lên.
+
+Web phải nằm ở gốc tên miền (ví dụ `mabe.vn/` hoặc `ten.github.io/`), không đặt trong thư mục con như `ten.github.io/mabe/`, vì đường dẫn ảnh và trang bắt đầu từ `/`.
+
+Mỗi trang là một thư mục có `index.html` (ví dụ `out/bang-gia/index.html`), nên đường dẫn `/bang-gia/` chạy được trên hầu hết hosting mà không cần cấu hình thêm. Link cũ dạng `/#bang-gia` tự chuyển sang trang mới.
 
 ## Cấu trúc thư mục
 
 ```
 MABE/
-├── index.html            Khung trang, nội dung 5 trang
-├── css/style.css         Toàn bộ giao diện (màu chủ đạo ở :root, biến --brand)
-├── js/app.js             Chuyển trang, tính chi phí, quy trình, dự án, menu điện thoại, sao chép email
-├── js/i18n.js            Từ điển Việt–Anh và nút chuyển ngôn ngữ (VI | EN)
-├── assets/images/        Ảnh thật của MABE (lookbook, catalog, product lifestyle) và logo khách hàng
-├── assets/logo/          Bộ logo MABE production (SVG: logo chính, logo phụ, submark, icon)
-├── docs/                 Tài liệu dự án (brief)
-├── CREDITS.md            Nguồn ảnh mẫu
-└── README.md
+├── app/                    Các trang (mỗi thư mục = 1 đường dẫn) và layout chung
+│   ├── layout.tsx          Khung trang: header, footer, phông chữ, mô tả SEO
+│   ├── globals.css         Toàn bộ giao diện (màu chủ đạo ở :root, biến --brand)
+│   ├── page.tsx            Trang chủ  → /
+│   ├── du-an/              Dự án      → /du-an/
+│   ├── bang-gia/           Bảng giá   → /bang-gia/
+│   ├── quy-trinh/          Quy trình  → /quy-trinh/
+│   └── lien-he/            Liên hệ    → /lien-he/
+├── src/
+│   ├── components/         Header, footer, bộ lọc dự án, tính chi phí, stepper quy trình, sao chép email…
+│   ├── data/               Nội dung dạng dữ liệu: giá, dự án, quy trình, đường dẫn trang
+│   ├── i18n/               Toàn bộ chữ của web: vi.ts (tiếng Việt), en.ts (tiếng Anh)
+│   └── fonts/              Phông Be Vietnam Pro
+├── public/
+│   ├── images/             Ảnh WebP dùng trên web (tự tạo khi build, không lưu trong git)
+│   └── logo/               Bộ logo MABE production (SVG)
+├── media-src/images/       Ảnh gốc JPG/PNG (không đưa lên web)
+├── scripts/                Script nén ảnh
+└── docs/                   Tài liệu dự án (brief)
 ```
 
-## Các trang (chuyển bằng hash trên URL)
+## Sửa nội dung
 
-| Trang | URL | Nội dung |
-|---|---|---|
-| Trang chủ | `index.html#home` | Giới thiệu, dịch vụ, ảnh mẫu, giá khởi điểm |
-| Dự án | `index.html#du-an` | Dự án tiêu biểu, đối tác |
-| Bảng giá | `index.html#bang-gia` | Giá catalog và lookbook, tính nhanh chi phí |
-| Quy trình | `index.html#quy-trinh` | Stepper có animation, chi tiết 5 bước |
-| Liên hệ | `index.html#lien-he` | Số điện thoại (Zalo, Telegram, WhatsApp), Instagram, email |
+- **Chữ trên web (mọi trang):** `src/i18n/vi.ts` (tiếng Việt) và `src/i18n/en.ts` (tiếng Anh). Hai file có cùng cấu trúc, mỗi trang một nhóm (`home`, `pricing`, `contact`…).
+- **Giá và số ảnh mỗi gói:** `src/data/pricing.ts`. Một chỗ duy nhất, tự cập nhật bảng giá, phần giá ở trang chủ và công cụ tính chi phí. Giá tự định dạng theo ngôn ngữ (600.000đ / 600,000 VND).
+- **Dự án:** cấu trúc (loại, thương hiệu, danh sách ảnh) ở `src/data/projects.ts`; tên, lĩnh vực, thử thách ở `projects` trong `vi.ts`/`en.ts`, cùng `id`. Thêm dự án = thêm 1 dòng vào `projects.ts` và 1 mục vào cả hai file ngôn ngữ. Logo đối tác ở `app/du-an/page.tsx`.
+- **Quy trình 5 bước:** chữ ở `flow` trong `vi.ts`/`en.ts`, ảnh từng bước ở `src/data/flow.ts`.
+- **Liên hệ:** `src/data/contact.ts` (số điện thoại, Zalo, Telegram, WhatsApp, email, Instagram), dùng chung cho trang Liên hệ và footer.
 
-## Chạy thử
+## Thêm hoặc thay ảnh
 
-Mở thẳng `index.html` bằng trình duyệt, hoặc chạy server cục bộ:
+1. Bỏ ảnh JPG vào `media-src/images/`, đặt tên không dấu, ví dụ `lb-5-1.jpg` (cạnh dài khoảng 1400px).
+2. Chạy `npm run images` để xem ở máy (khi build, việc này tự chạy). Mỗi ảnh tạo 2 bản WebP: `lb-5-1-600.webp` (ảnh nhỏ) và `lb-5-1-1400.webp` (ảnh lớn).
+3. Dùng tên ảnh không đuôi (`lb-5-1`) trong code hoặc dữ liệu, ví dụ trong mảng `imgs` của dự án.
 
-```bash
-cd /Users/cuongnguyen/MABE
-python3 -m http.server 8000
-# mở http://localhost:8000
-```
+## Ngôn ngữ (VI | EN)
 
-## Cần thay bằng dữ liệu thật
+Nút VI | EN ở header đổi ngôn ngữ ngay trên trang (cùng đường dẫn) và được nhớ cho lần sau. Toàn bộ chữ nằm ở `src/i18n/vi.ts` và `src/i18n/en.ts`; code trang chỉ tham chiếu, ví dụ `m.pricing.heading`.
 
-- **Bảng giá:** giá hiện tại là mẫu. Sửa trong `index.html` (mục `data-view="bang-gia"`) và hàm tính chi phí trong `js/app.js` (khối `Est`).
-- **Ảnh:** thay file trong `assets/images/` bằng ảnh thật của MABE, giữ nguyên tên file (tỷ lệ vuông 1:1 là đẹp nhất).
-- **Dự án và đối tác:** mảng `P` trong `js/app.js`, và các ô `.partner` trong `index.html`. Hiện là nội dung mẫu.
-- **Liên hệ:** số điện thoại, email `mabe.product@gmail.com` và Instagram `@mabeproduction` đã điền. Liên kết Telegram dùng số điện thoại, đổi sang tên người dùng nếu có.
-- **Logo:** hiện là chữ MABE kèm ô vuông, thay bằng file logo khi có.
+- Sửa câu tiếng Việt: chỉ sửa trong `vi.ts`, bản tiếng Anh không bị ảnh hưởng.
+- Thêm câu mới: thêm vào **cả hai** file với cùng tên mục. Nếu `en.ts` thiếu hoặc thừa mục so với `vi.ts`, `npm run typecheck` / `npm run build` báo lỗi, nên không thể quên dịch.
 
 ## Lưu ý
 
-- Phông chữ Be Vietnam Pro tải từ Google Fonts nên cần có mạng; không có mạng sẽ dùng phông hệ thống.
-- Trang không có form và không gửi dữ liệu lên máy chủ nào. Nút "Gửi mail" mở ứng dụng thư, nút "Sao chép email" chép địa chỉ vào bộ nhớ tạm.
-- Ngôn ngữ: nút VI | EN ở header. Khi sửa chữ tiếng Việt trong `index.html`, cập nhật câu tương ứng trong `js/i18n.js`.
+- Bảng giá và dự án hiện là dữ liệu mẫu, MABE cần xác nhận trước khi dùng thật.
+- Phông chữ nằm sẵn trong code, không cần mạng.
