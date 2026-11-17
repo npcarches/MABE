@@ -4,7 +4,7 @@ Website Next.js (App Router, TypeScript), xuất ra HTML tĩnh: chạy `npm run 
 
 ## Cài đặt và chạy
 
-Cần Node.js 20.9 trở lên.
+Cần Node.js 20.9 trở lên (Node 22 nếu muốn chạy `wrangler`).
 
 ```bash
 npm install
@@ -19,18 +19,19 @@ npm run dev        # http://localhost:3000, tự tải lại khi sửa code
 | `npm run images` | Chỉ nén ảnh gốc thành WebP (dùng khi chạy `npm run dev` sau khi thêm ảnh) |
 | `npm run lint` / `npm run typecheck` | Kiểm tra code |
 
-## Đưa lên mạng (Cloudflare Pages)
+## Đưa lên mạng (Cloudflare Workers)
 
-Kết nối repo GitHub với Cloudflare Pages (Workers & Pages → Create → Pages → Connect to Git), rồi điền:
+Kết nối repo GitHub (Workers & Pages → Create → Import a repository), rồi điền:
 
 | Mục | Giá trị |
 |---|---|
-| Framework preset | None |
 | Build command | `npm run build` |
-| Build output directory | `out` |
-| Production branch | `main` |
+| Deploy command | `npx wrangler deploy` |
+| Preview command | `npx wrangler versions upload` |
 
-Phiên bản Node lấy từ file `.node-version` (20). Mỗi lần push lên `main`, Cloudflare tự nén ảnh sang WebP, build và đưa web lên; nhánh khác có link xem thử riêng.
+`wrangler.jsonc` chỉ cho Cloudflare phục vụ thư mục `out/`. Phiên bản Node lấy từ `.node-version` (22, wrangler cần Node 22.12+). Nhánh được deploy chính thức đặt ở Settings → Build → Branch control → Production branch (hiện là `staging`); các nhánh khác có link xem thử riêng. Mỗi lần push, Cloudflare tự nén ảnh sang WebP, build và đưa web lên.
+
+Nếu dùng Cloudflare Pages thay vì Workers: Build command `npm run build`, Build output directory `out`.
 
 Ảnh WebP (`public/images/`) không lưu trong git, chỉ ảnh gốc trong `media-src/images/`. Khi chạy `npm run dev` ở máy mới, chạy `npm run images` một lần trước để có ảnh.
 
